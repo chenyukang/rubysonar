@@ -888,7 +888,7 @@ def parse_dump(input, output, endmark)
     simplifier = AstSimplifier.new(input)
     hash = simplifier.simplify
 
-    json_string = JSON.pretty_generate(hash)
+    json_string = JSON.pretty_generate(hash, :max_nesting => 500)
     out = File.open(output, 'wb')
     out.write(json_string)
     out.close
