@@ -193,16 +193,6 @@ public class Parser {
                 return new BinOp(Op.Or, gt, eq, file, start, end);
             }
 
-            if (op == Op.NotIn) {
-                Node in = new BinOp(Op.In, left, right, file, start, end);
-                return new UnaryOp(Op.Not, in, file, start, end);
-            }
-
-            if (op == Op.NotEq) {
-                Node in = new BinOp(Op.Eq, left, right, file, start, end);
-                return new UnaryOp(Op.Not, in, file, start, end);
-            }
-
             return new BinOp(op, left, right, file, start, end);
 
         }

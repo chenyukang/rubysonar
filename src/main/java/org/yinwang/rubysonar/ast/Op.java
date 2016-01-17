@@ -36,10 +36,8 @@ public enum Op {
 
     // synthetic
     NotEqual,
-    NotEq,
     LtE,
     GtE,
-    NotIn,
 
     // ruby
     Defined,
